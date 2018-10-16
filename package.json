@@ -1,0 +1,43 @@
+{
+    "name": "advanced-templates",
+    "displayName": "Advanced Templates",
+    "description": "Extensions to create templates with advanced features.",
+    "version": "0.0.1",
+    "publisher": "go2sh",
+    "engines": {
+        "vscode": "^1.28.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onCommand:extension.createTemplate"
+    ],
+    "main": "./out/src/extension",
+    "contributes": {
+        "commands": [
+            {
+                "command": "extension.createTemplate",
+                "title": "Create Template"
+            }
+        ]
+    },
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./node_modules/vscode/bin/install",
+        "test": "npm run compile && node ./node_modules/vscode/bin/test"
+    },
+    "devDependencies": {
+        "@types/mocha": "^2.2.42",
+        "@types/node": "^8.0.0",
+        "tslint": "^5.8.0",
+        "typescript": "^3.1.0",
+        "vscode": "^1.1.6"
+    },
+    "dependencies": {
+        "@types/js-yaml": "^3.11.2",
+        "js-yaml": "^3.12.0"
+    }
+}
